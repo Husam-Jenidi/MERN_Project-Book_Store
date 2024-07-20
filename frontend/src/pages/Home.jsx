@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 import { MdOutlineAddBox } from 'react-icons/md';
 import BooksTable from '../components/home/BooksTable';
 import BooksCard from '../components/home/BooksCard';
-import Theme from '../components/Theme';
-import { useTheme } from '../components/ThemeContext';
+//import Theme from '../components/Theme';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 const Home = () => {
-  const {theme} =useTheme();
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showType, setShowType] = useState('table');
@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
     <div className={'p-4 dark:bg-slate-800 dark:text-white'}>
-      <div className="flex justify-center items-center gap-x-4">
+      {/* <div className="flex justify-center items-center gap-x-4">
         <button
           className="bg-sky-800 text-white hover:bg-sky-600 px-4 py-1 rounded-lg"
           onClick={() => setShowType('card')}
@@ -38,20 +38,23 @@ const Home = () => {
           Card
         </button>
         <button
-          className="bg-sky-800 text-white hover:bg-sky-600 px-4 py-1 rounded-lg"
+          className="bg-sky-800 hover:bg-sky-600 px-4 py-1 rounded-lg"
           onClick={() => setShowType('table')}
         >
           Table
         </button>
-        <Theme />
-      </div>
+        <Theme/>
+      </div>*/}
+
+      <Header showType={showType} setShowType={setShowType} title="Book List"/> 
 
       <div className="flex justify-between items-center husam">
-        <h1 className="text-3xl my-8">Book List</h1>
+       
         <Link to="/books/create">
           <MdOutlineAddBox className="text-sky-800 text-4xl" />
         </Link>
       </div>
+      
       {loading ? (
         <Spinner />
       ) : showType === 'table' ? (
@@ -59,6 +62,10 @@ const Home = () => {
       ) : (
         <BooksCard books={books} />
       )}
+
+<div className="h-[100px]"></div>
+      <Footer/>
+
     </div>
   );
 };
