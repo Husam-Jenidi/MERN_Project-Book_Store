@@ -14,10 +14,10 @@ function Footer() {
                             <h4 className="text-2xl mb-3">Company</h4>
                             <p className="text-gray-500">
                                 Salita della neve <br />
-                                Genova, <br />Italy
+                                Genova, Italy
                                 <br />
-                                <strong>Phone:</strong>+393791127325<br />
-                                <strong>Email:</strong>husam.jenidi95@gmail.com<br />
+                                <strong>Phone:</strong> +393791127325<br />
+                                <strong>Email:</strong> husam.jenidi95@gmail.com<br />
                             </p>
                         </div>
                         <div className='mb-5'>
