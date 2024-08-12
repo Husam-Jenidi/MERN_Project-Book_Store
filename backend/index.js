@@ -7,7 +7,7 @@ import cors from "cors"
 
 const app = express();
 app.use(cors(
-   { origin:["https://mern-project-book-store.vercel.app/"],
+   { origin:["https://mern-project-book-store.vercel.app"],
     methods:["POST","GET"],
     credentials:true
 }
