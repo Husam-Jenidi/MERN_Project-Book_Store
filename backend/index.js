@@ -7,8 +7,9 @@ import cors from "cors"
 
 const app = express();
 app.use(cors(
-   { origin:["https://mern-project-book-store.vercel.app"],
-    methods:["POST","GET"],
+   { origin:["mern-project-book-store-frontend.vercel.app"],
+    methods:['GET','POST','PUT','DELETE'],
+    allowedHeaders:['Content-Type'],
     credentials:true
 }
 ))
@@ -16,7 +17,7 @@ app.use(cors(
 app.use(express.json()) 
 //Middleware for handling CORS POLICY
 //Option 1: Allow all origins with deafult of cors(*)
-app.use(cors())
+//app.use(cors())
 
 //Option 2: Allow Custom Origins
 // app.use(cors({
