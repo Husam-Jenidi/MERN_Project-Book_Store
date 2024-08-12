@@ -6,7 +6,12 @@ import cors from "cors"
 
 
 const app = express();
-
+app.use(cors(
+   { origin:["mern-project-book-store.vercel.app"],
+    methods:["POST","GET"],
+    credentials:true
+}
+))
 // Middleware for parsing the request body
 app.use(express.json()) 
 //Middleware for handling CORS POLICY
