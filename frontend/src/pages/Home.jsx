@@ -9,6 +9,7 @@ import BooksCard from '../components/home/BooksCard';
 //import Theme from '../components/Theme';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Test from '../components/Test';
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -64,6 +65,8 @@ const Home = () => {
       )}
 
 <div className="h-[100px]"></div>
+
+<Test/>
       <Footer/>
 
     </div>
